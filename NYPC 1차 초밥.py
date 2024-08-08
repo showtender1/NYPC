@@ -2,15 +2,12 @@ def t(A, B):
     boxes = min(A, B)
     big = max(A, B)
 
-    if boxes * 4 < big:
+    if boxes * 3 < big:
         return -1
 
-    if big % 4 == 0:
-        tmp = big // 4
-    else:
-        tmp = big // 4 + 1
+    total_sushi = A + B
 
-    return tmp
+    return (total_sushi + 3) // 4
 
 n = int(input())
 results = []
